@@ -1,0 +1,226 @@
+<div class='main'>	<a class='custom-link' routerLink=''>Home</a>
+        <div class="cust-con">
+            <div class="signup-content">
+                <div class="signup-img">
+                    <img src="../../assets/images/signup-img.jpg" alt="">
+                </div>
+                <div class="signupform">
+                    <form class="registerform" id="register-form" #Data="ngForm" (ngSubmit)="RegisterValue(Data.value)">
+                        <h2>Step 1 : Enter your basic details</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name :</label>
+								<input type="text" name="name" id="name" required [(ngModel)]="name" #uname="ngModel"/>
+								<div style="color:red;font-family:'Montserrat';font-size:12px;" *ngIf="uname.invalid && (uname.dirty || uname.touched)">
+									<div *ngIf="uname.errors.required">
+												Enter Username   
+									</div>
+								</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="father_name">Father's Name :</label>
+								<input type="text" name="father_name" id="father_name" required [(ngModel)]="father_name" #fname="ngModel"/>
+								<div style="color:red;font-family:'Montserrat';font-size:12px;" *ngIf="fname.invalid && (fname.dirty || fname.touched)">
+									<div *ngIf="fname.errors.required">
+										Enter Father's Name   
+									</div>
+								</div>
+                            </div>
+						</div>
+						
+                        <div class="form-radio">
+                            <label for="gender" class="radio-label">Gender :</label>
+                            <div class="form-radio-item">
+                                <input type="radio" name="gender" id="male" value='Men' [(ngModel)]="gender" >
+                                <label for="male">Male</label>
+                                <span class="check"></span>
+                            </div>
+                            <div class="form-radio-item">
+                                <input type="radio" name="gender" id="female" value='Women' >
+                                <label for="female">Female</label>
+                                <span class="check"></span>
+							</div>
+				
+                        </div>
+						
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="religion">Religion :</label>
+                                <div class="form-select">
+                                    <select name="religion" id="religion" required [(ngModel)]="religion" #rel="ngModel">
+                                        <option value="" selected disabled>---Select your religion---</option>
+										<option value="Buddhism">Buddhism</option>
+										<option value="Christianity">Christianity</option>
+										<option value="Hinduism">Hinduism</option>
+										<option value="Islam">Islam</option>
+										<option value="Jainism">Jainism</option>
+										<option value="Judaism">Judaism</option>
+										<option value="Nonreligious">Nonreligious</option>
+										<option value="Rastafarianism">Rastafarianism</option>
+										<option value="Secular">Secular</option>
+										<option value="Shinto">Shinto</option>
+										<option value="Sikhism">Sikhism</option>
+										<option value="Spiritism">Spiritism</option>
+										<option value="Other">Other</option>
+									</select>
+									<span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+									
+								</div>
+								<div style="color:red;font-family:'Montserrat';font-size:12px;" *ngIf="(rel.dirty || rel.touched)">
+									<div *ngIf="rel.errors">
+										Please Select Religion	
+									</div> 
+								</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="language">Mother tongue :</label>
+                                <div class="form-select">
+                                    <select name="language" id="language" required [(ngModel)]="language" #len="ngModel">
+                                      <option value='' selected disabled>--Select your Mother tongue--</option>
+									  <option value="Afrikanns">Afrikanns</option>
+									  <option value="Arabic">Arabic</option>
+									  <option value="Basque">Basque</option>
+									  <option value="Bengali">Bengali</option>
+									  <option value="Dutch">Dutch</option>
+									  <option value="English">English</option>
+									  <option value="French">French</option>
+									  <option value="Georgian">Georgian</option>
+									  <option value="German">German</option>
+									  <option value="Greek">Greek</option>
+									  <option value="Gujarati">Gujarati</option>
+									  <option value="Hindi">Hindi</option>
+									  <option value="Icelandic">Icelandic</option>
+									  <option value="Indonesian">Indonesian</option>
+									  <option value="Irish">Irish</option>
+									  <option value="Italian">Italian</option>
+									  <option value="Japanese">Japanese</option>
+									  <option value="Korean">Korean</option>
+									  <option value="Malayalam">Malayalam</option>
+									  <option value="Marathi">Marathi</option>
+									  <option value="Nepali">Nepali</option>
+									  <option value="Portuguese">Portuguese</option>
+									  <option value="Punjabi">Punjabi</option>
+									  <option value="Romanian">Romanian</option>
+									  <option value="Russian">Russian</option>
+									  <option value="Spanish">Spanish</option>
+									  <option value="Tamil">Tamil</option>
+									  <option value="Telugu">Telugu</option>														  
+                                    </select>
+                                    <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+								</div>
+								<div style="color:red;font-family:'Montserrat';font-size:12px;" *ngIf="(len.dirty || len.touched)">
+									<div *ngIf="len.errors">
+										Please Select Mother Tongue
+									</div> 
+								</div>
+                            </div>
+                        </div>
+						<div class='form-row'>
+							<div class="form-group">
+								<label for="course">Height :</label>
+								<input type="text" name="height" id="height" placeholder="Ex : 5' 6''" required  [(ngModel)]="height" #he="ngModel"/>
+								<div style="color:red;font-family:'Montserrat';font-size:12px;" *ngIf=" (he.dirty || he.touched)">
+									<div *ngIf="he.errors">
+										Enter Height
+									</div>
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label for="email">Weight :</label>
+								<input type="text" name="weight" id="weight" placeholder="Ex : 56 KG" required pattern='[1-9][0-9] KG' [(ngModel)]="weight" #we="ngModel"/>
+								<div style="color:red;font-family:'Montserrat';font-size:12px;" *ngIf="(we.dirty || we.touched)">
+									<div *ngIf="we.errors">	
+										Enter Weight
+									</div>	
+								</div>
+							</div>
+						</div>
+						<div class='form-row'>
+							<div class="form-group">
+								<label for="birth_date">Date of Birth :</label>
+								<input type="date" name="birth_date" id="birth_date" required [(ngModel)]="birth_date" #bd="ngModel">
+								<div style="color:red;font-family:'Montserrat';font-size:12px;" *ngIf=" (bd.dirty || bd.touched)">
+									<div *ngIf="bd.errors">	
+										Enter Birth Date
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="age">Age :</label>
+								<input type="text" name="age" id="age" pattern='[1-9][0-9]' required [(ngModel)]="age" #ag="ngModel">
+								<div style="color:red;font-family:'Montserrat';font-size:12px;" *ngIf="(ag.dirty || ag.touched)">
+									<div *ngIf="ag.errors">
+										Enter Valid Age
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class='form-row'>
+							<div class="form-group">
+								<label for="course">Place of Birth :</label>
+								<input type="text" name="place" id="place" required [(ngModel)]="place" #pb="ngModel"/>
+								<div style="color:red;font-family:'Montserrat';font-size:12px;" *ngIf=" (pb.dirty || pb.touched)">
+									<div *ngIf="pb.errors">
+										Enter Birth Place
+										</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="email">Maritial Status :</label>
+								<div class="form-select">
+                                    <select name="status" id="status" required [(ngModel)]="status" #mar="ngModel">
+                                        <option value='' selected disabled>--Choose your Maritial status--</option>
+										<option value="Unmarried">Not married yet</option>
+                                        <option value="widowed">Widowed</option>
+                                        <option value="Divorced">Divorced</option>
+										<option value="Awt-Divorced">Awaiting Divorce</option>
+                                    </select>
+                                    <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+								</div>
+								<div style="color:red;font-family:'Montserrat';font-size:12px;" *ngIf="(mar.dirty || mar.touched)">
+									<div *ngIf="mar.errors">
+										Please Select Maritial Status
+									</div> 
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+                            <label for="address">Address :</label>
+							<input type="text" name="address" id="address" required [(ngModel)]="address" #add="ngModel"/>
+							<div style="color:red;font-family:'Montserrat';font-size:12px;" *ngIf="(add.dirty || add.touched)">
+								<div *ngIf="add.errors">
+									Enter Your Address
+								</div>
+							</div>
+                        </div>
+						<div class='form-row'>
+							<div class="form-group">
+								<label for="course">City :</label>
+								<input type="text" name="city" id="city"  required [(ngModel)]="city" #ci="ngModel"/>
+								<div style="color:red;font-family:'Montserrat';font-size:12px;" *ngIf=" (ci.dirty || ci.touched)">
+									<div *ngIf="ci.errors">
+										Enter Your City
+										</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="email">State :</label>
+								<input type="text" name="state" id="state" required [(ngModel)]="state" #st="ngModel"/>
+								<div style="color:red;font-family:'Montserrat';font-size:12px;" *ngIf=" (st.dirty || st.touched)">
+									<div *ngIf="st.errors">
+										Enter State
+									</div>
+								</div>
+							</div>
+						</div>
+						
+                        <div class="form-submit">
+                            <input type="submit" value="Next Step" class="submit" [disabled]="!Data.form.valid"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>

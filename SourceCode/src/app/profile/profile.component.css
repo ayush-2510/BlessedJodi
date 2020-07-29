@@ -1,0 +1,391 @@
+@import '../../assets/css/bootstrap_profile.css';
+@import 'https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css';
+@font-face {
+    font-family: Poppins-Regular;
+    src: url('../../assets/fonts/poppins/Poppins-Regular.ttf'); 
+  }
+  @font-face {
+    font-family: Poppins-Medium;
+    src: url('../../assets/fonts/poppins/Poppins-Medium.ttf'); 
+  }
+  @font-face {
+    font-family: Poppins-Bold;
+    src: url('../../assets/fonts/poppins/Poppins-Bold.ttf'); 
+  }
+  @font-face {
+    font-family: Poppins-SemiBold;
+    src: url('../../assets/fonts/poppins/Poppins-SemiBold.ttf'); 
+  }
+  .mynav{
+    overflow: hidden;
+      background-color: #2b335c;
+      font-family: Poppins-Regular, sans-serif;
+    }
+  .mynav a{
+    float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 9px 30px;
+      text-decoration: none;
+      font-size: 16px;
+      transition:0.6s;
+    }
+  .mynav .icon {
+      display: none;
+    }
+  .mydropdown {
+    float: left;
+    overflow: hidden;
+  }
+  .mydropdown .dropbtn1 {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 9px 30px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  .contentdrop {
+    display: none;
+    position: absolute;
+    background-color:rgba(220,221,227,0.9);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .contentdrop a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  .mynav a:hover{
+      background-color:white;
+      color:black;
+      transition:0.6s;
+      text-decoration: none;
+    }
+  .mydropdown:hover .dropbtn1 {
+    background-color: white;
+    color: #2b335c;
+  }
+  
+  .contentdrop a:hover {
+    background-color: rgba(43,51,92,0.8);
+    color: white;
+  }
+  
+  .mydropdown:hover .contentdrop {
+    display: block;
+    transition: 5s;
+  }  
+    @media screen and (max-width: 600px) {
+      .mynav a:not(:first-child),.mydropdown .dropbtn1
+    {display: none;}
+      .mynav a.icon {
+        float: right;
+        display: block;
+      }
+    }
+    
+    @media screen and (max-width: 600px) {
+      .mynav.responsive {position: relative;}
+      .mynav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .mynav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+      .mynav.responsive .mydropdown {float: none;}
+    .mynav.responsive .contentdrop {position: relative;}
+    .mynav.responsive .mydropdown .dropbtn1 {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+    }
+      @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    src: url("../../assets/fonts/montserrat/Montserrat-Light.ttf");
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url("../../assets/fonts/montserrat/Montserrat-Regular.ttf");
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 400;
+    src: url("../../assets/fonts/montserrat/Montserrat-Italic.ttf");
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    src: url("../../assets/fonts/montserrat/Montserrat-Medium.ttf");
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    src: url("../../assets/fonts/montserrat/Montserrat-SemiBold.ttf");
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: url("../../assets/fonts/montserrat/Montserrat-Bold.ttf");
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 700;
+    src: url("../../assets/fonts/montserrat/Montserrat-BoldItalic.ttf");
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 900;
+    src: url("../../assets/fonts/montserrat/montserrat-v12-latin-900.ttf"), url("../../assets/fonts/montserrat/montserrat-v12-latin-900.eot") format("embedded-opentype"), url("../../assets/fonts/montserrat/montserrat-v12-latin-900.svg") format("woff2"), url("../../assets/fonts/montserrat/montserrat-v12-latin-900.woff") format("woff"), url("../../assets/fonts/montserrat/montserrat-v12-latin-900.woff2") format("truetype"); }
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    src: url("../../assets/fonts/poppins/poppins-v5-latin-300.eot");
+    src: local("Poppins Light"), local("Poppins-Light"), url("../../assets/fonts/poppins/poppins-v5-latin-300.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/poppins/poppins-v5-latin-300.woff2") format("woff2"), url("../../assets/fonts/poppins/poppins-v5-latin-300.woff") format("woff"), url("../../assets/fonts/poppins/poppins-v5-latin-300.ttf") format("truetype"), url("../../assets/fonts/poppins/poppins-v5-latin-300.svg#Poppins") format("svg");
+  }
+  @font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 300;
+    src: url("../../assets/fonts/poppins/poppins-v5-latin-300italic.eot");
+    src: local("Poppins Light Italic"), local("Poppins-LightItalic"), url("../../assets/fonts/poppins/poppins-v5-latin-300italic.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/poppins/poppins-v5-latin-300italic.woff2") format("woff2"), url("../../assets/fonts/poppins/poppins-v5-latin-300italic.woff") format("woff"), url("../../assets/fonts/poppins/poppins-v5-latin-300italic.ttf") format("truetype"), url("../../assets/fonts/poppins/poppins-v5-latin-300italic.svg#Poppins") format("svg");
+  }
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url("../../assets/fonts/poppins/poppins-v5-latin-regular.eot");
+    src: local("Poppins Regular"), local("Poppins-Regular"), url("../../assets/fonts/poppins/poppins-v5-latin-regular.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/poppins/poppins-v5-latin-regular.woff2") format("woff2"), url("../../assets/fonts/poppins/poppins-v5-latin-regular.woff") format("woff"), url("../../assets/fonts/poppins/poppins-v5-latin-regular.ttf") format("truetype"), url("../../assets/fonts/poppins/poppins-v5-latin-regular.svg#Poppins") format("svg");
+  }
+  @font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 400;
+    src: url("../../assets/fonts/poppins/poppins-v5-latin-italic.eot");
+    src: local("Poppins Italic"), local("Poppins-Italic"), url("../../assets/fonts/poppins/poppins-v5-latin-italic.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/poppins/poppins-v5-latin-italic.woff2") format("woff2"), url("../../assets/fonts/poppins/poppins-v5-latin-italic.woff") format("woff"), url("../../assets/fonts/poppins/poppins-v5-latin-italic.ttf") format("truetype"), url("../../assets/fonts/poppins/poppins-v5-latin-italic.svg#Poppins") format("svg");
+  }
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    src: url("../../assets/fonts/poppins/poppins-v5-latin-500.eot");
+    src: local("Poppins Medium"), local("Poppins-Medium"), url("../../assets/fonts/poppins/poppins-v5-latin-500.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/poppins/poppins-v5-latin-500.woff2") format("woff2"), url("../../assets/fonts/poppins/poppins-v5-latin-500.woff") format("woff"), url("../../assets/fonts/poppins/poppins-v5-latin-500.ttf") format("truetype"), url("../../assets/fonts/poppins/poppins-v5-latin-500.svg#Poppins") format("svg");
+  }
+  @font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 500;
+    src: url("../../assets/fonts/poppins/poppins-v5-latin-500italic.eot");
+    src: local("Poppins Medium Italic"), local("Poppins-MediumItalic"), url("../../assets/fonts/poppins/poppins-v5-latin-500italic.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/poppins/poppins-v5-latin-500italic.woff2") format("woff2"), url("../../assets/fonts/poppins/poppins-v5-latin-500italic.woff") format("woff"), url("../../assets/fonts/poppins/poppins-v5-latin-500italic.ttf") format("truetype"), url("../../assets/fonts/poppins/poppins-v5-latin-500italic.svg#Poppins") format("svg");
+  }
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    src: url("../../assets/fonts/poppins/poppins-v5-latin-600.eot");
+    src: local("Poppins SemiBold"), local("Poppins-SemiBold"), url("../../assets/fonts/poppins/poppins-v5-latin-600.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/poppins/poppins-v5-latin-600.woff2") format("woff2"), url("../../assets/fonts/poppins/poppins-v5-latin-600.woff") format("woff"), url("../../assets/fonts/poppins/poppins-v5-latin-600.ttf") format("truetype"), url("../../assets/fonts/poppins/poppins-v5-latin-600.svg#Poppins") format("svg");
+  }
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    src: url("../../assets/fonts/poppins/poppins-v5-latin-700.eot");
+    src: local("Poppins Bold"), local("Poppins-Bold"), url("../../assets/fonts/poppins/poppins-v5-latin-700.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/poppins/poppins-v5-latin-700.woff2") format("woff2"), url("../../assets/fonts/poppins/poppins-v5-latin-700.woff") format("woff"), url("../../assets/fonts/poppins/poppins-v5-latin-700.ttf") format("truetype"), url("../../assets/fonts/poppins/poppins-v5-latin-700.svg#Poppins") format("svg");
+  }
+  @font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 700;
+    src: url("../../assets/fonts/poppins/poppins-v5-latin-700italic.eot");
+    src: local("Poppins Bold Italic"), local("Poppins-BoldItalic"), url("../../assets/fonts/poppins/poppins-v5-latin-700italic.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/poppins/poppins-v5-latin-700italic.woff2") format("woff2"), url("../../assets/fonts/poppins/poppins-v5-latin-700italic.woff") format("woff"), url("../../assets/fonts/poppins/poppins-v5-latin-700italic.ttf") format("truetype"), url("../../assets/fonts/poppins/poppins-v5-latin-700italic.svg#Poppins") format("svg");
+  }
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 800;
+    src: url("../../assets/fonts/poppins/poppins-v5-latin-800.eot");
+    src: local("Poppins ExtraBold"), local("Poppins-ExtraBold"), url("../../assets/fonts/poppins/poppins-v5-latin-800.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/poppins/poppins-v5-latin-800.woff2") format("woff2"), url("../../assets/fonts/poppins/poppins-v5-latin-800.woff") format("woff"), url("../../assets/fonts/poppins/poppins-v5-latin-800.ttf") format("truetype"), url("../../assets/fonts/poppins/poppins-v5-latin-800.svg#Poppins") format("svg");
+  }
+  @font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 800;
+    src: url("../../assets/fonts/poppins/poppins-v5-latin-800italic.eot");
+    src: local("Poppins ExtraBold Italic"), local("Poppins-ExtraBoldItalic"), url("../../assets/fonts/poppins/poppins-v5-latin-800italic.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/poppins/poppins-v5-latin-800italic.woff2") format("woff2"), url("../../assets/fonts/poppins/poppins-v5-latin-800italic.woff") format("woff"), url("../../assets/fonts/poppins/poppins-v5-latin-800italic.ttf") format("truetype"), url("../../assets/fonts/poppins/poppins-v5-latin-800italic.svg#Poppins") format("svg");
+  }
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 900;
+    src: url("../../assets/fonts/poppins/poppins-v5-latin-900.eot");
+    src: local("Poppins Black"), local("Poppins-Black"), url("../../assets/fonts/poppins/poppins-v5-latin-900.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/poppins/poppins-v5-latin-900.woff2") format("woff2"), url("../../assets/fonts/poppins/poppins-v5-latin-900.woff") format("woff"), url("../../assets/fonts/poppins/poppins-v5-latin-900.ttf") format("truetype"), url("../../assets/fonts/poppins/poppins-v5-latin-900.svg#Poppins") format("svg");
+  }
+  a:focus, a:active {
+    text-decoration: none;
+    outline: none;
+    transition: all 300ms ease 0s;
+    -moz-transition: all 300ms ease 0s;
+    -webkit-transition: all 300ms ease 0s;
+    -o-transition: all 300ms ease 0s;
+    -ms-transition: all 300ms ease 0s; }
+    
+  .container{
+      margin:1% auto;
+      width:90%;
+      height:641px;
+      padding:0px;
+  }
+  .profile-img{
+      height:100%;
+      float:left;
+  }
+  .profile-detail{
+  float:right;
+  background:#2b335c;
+  height:100%;
+  width:calc(100% - 500px);
+  overflow: auto;
+  }
+  .details{
+      margin:4% 13%;
+  }
+  h2 {
+    line-height: 1.66;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-bottom: 35px; 
+    text-align:center;}
+    .btn-div{
+      text-align:center;
+      margin-top:2%;
+      font-family:Montserrat;
+      font-weight:600;
+      color:#2b335c;
+  }
+  .butt{
+      border:none;
+      border-radius:10px;
+      font-size:16px;
+      padding:8px 10px;
+      background:white;
+      transition:0.5s;
+  }
+  .butt:hover{
+      background:#6d7399;
+      color:white;
+      transition:0.5s;
+  }
+  
+  @media screen and (max-width: 992px) {
+  .profile-detail {
+      width: 100%; 
+      }
+  .profile-img{width:100%;height:100%}
+  .butt{
+      border:none;
+      border-radius:5px;
+      font-size:14px;
+      padding:5px 7px;
+  }
+  }
+  
+  .form-row {
+  margin: 0 -15px; display:flex;
+  }
+  .form-row .form-group {
+      width: 40%;
+      padding: 0px 15px; 
+      }
+  .form-row .form-area {
+      width: 100%;
+      padding: 0px 15px; 
+      }
+  .form-row .form-data{
+      width: 60%;
+      font-size:17px;
+      color:white;
+      font-family:Montserrat;
+    margin-bottom: 17px;
+    position: relative;
+    }
+    
+     .form-row .form-elm {
+      width: 50%;
+      padding: 0 15px; }
+  .form-group,.form-elm,.form-area {
+      font-size:17px;
+      color:white;
+      font-family:Montserrat;
+    margin-bottom: 20px;
+    position: relative; }
+  
+  .profile-detail::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  .profile-detail::-webkit-scrollbar-track {
+    background: #d1d1d1; 
+  }
+   
+  /* Handle */
+  .profile-detail::-webkit-scrollbar-thumb {
+    background: #6d7399; 
+  }
+  
+  /* Handle on hover */
+  .profile-detail::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+    @media screen and (max-width: 1250px){
+    h2{
+        font-size:30px;
+      margin-bottom:14px;
+    }
+    .form-row {
+      flex-direction: column;
+      -moz-flex-direction: column;
+      -webkit-flex-direction: column;
+      -o-flex-direction: column;
+      -ms-flex-direction: column;
+      margin: 0px; }
+    .form-row .form-group,.form-row .form-elm,.form-row .form-area{
+      width: 100%;
+    padding: 0px;
+  margin-bottom:5px;  }
+    .form-row .form-data{
+      width: 100%;
+    padding-left: 5%;
+  margin-bottom:5px;  
+  }
+  }
+  

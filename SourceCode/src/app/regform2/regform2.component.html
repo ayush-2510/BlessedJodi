@@ -1,0 +1,172 @@
+<div class="main">
+    <a class='custom-link' routerLink=''>Home</a>
+    <div class="cust-con">
+        <div class="signup-content">
+            <div class="signupform">
+                <form class="registerform" id="registerform" #Data="ngForm" (ngSubmit)="RegisterValue(Data.value)">
+                    <h2>Step 2 : Professional details and lifestyle</h2>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="education">Education Level :</label>
+                            <div class="form-select">
+                                <select name="education" id="education" required required [(ngModel)]="education" #edu="ngModel">
+                                    <option value='' selected>---Select education level---</option>
+                                    <option value="Doctorate">Doctorate</option>
+                                    <option value="Masters">Masters</option>
+                                    <option value="Honours degree">Honours degree</option>
+                                    <option value="Bachelors">Bachelors</option>
+                                    <option value="Undergraduate">Undergraduate</option>
+                                    <option value="Associates Degree">Associates Degree</option>
+                                    <option value="Diploma">Diploma</option>
+                                    <option value="High School">High School</option>
+                                    <option value="Less than High school">Less than High school</option>
+                                </select>
+                                <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                            </div>
+                            <div style="color:red;font-family:'Montserrat';font-size:12px;" *ngIf="(edu.dirty || edu.touched)">
+                                <div *ngIf="edu.errors">
+                                    Please Select Education level	
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="field">Education Field :</label>
+                            <div class="form-select">
+                                <select name="field" id="field" required required [(ngModel)]="field" #fld="ngModel">
+                                    <option value='' selected>---Select Education Field---</option>
+                                    <option value="Advertising/Marketing">Advertising/Marketing</option>
+                                    <option value="Administrative Service">Administrative Service</option>
+                                    <option value="Architecture">Architecture</option>
+                                    <option value="Armed Forces">Armed Forces</option>
+                                    <option value="Arts">Arts</option>
+                                    <option value="Commerce">Commerce</option>
+                                    <option value="Computers/IT">Computers/IT</option>
+                                    <option value="Education">Education</option>
+                                    <option value="Engineering/Technology">Engineering/Technology</option>
+                                    <option value="Fashion">Fashion</option>
+                                    <option value="Financial">Financial</option>
+                                    <option value="Fine Arts">Fine Arts</option>
+                                    <option value="Home Science">Home Science</option>
+                                    <option value="Law">Law</option>
+                                    <option value="Management">Management</option>
+                                    <option value="Medicine">Medicine</option>
+                                    <option value="Nursing">Nursing</option>
+                                    <option value="Office Administrative">Office Administrative</option>
+                                    <option value="Science ">Science </option>
+                                    <option value="Shipping">Shipping</option>
+                                    <option value="Travelling">Travelling</option>
+                                    <option value="Worker">Worker</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                                <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                            </div>
+                            <div style="color:red;font-family:'Montserrat';font-size:12px;" *ngIf="(fld.dirty || fld.touched)">
+                                <div *ngIf="fld.errors">
+                                    Please Select Education Field	
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="work">Work at :</label>
+                        <input type="text" name="workplace" id="workplace" placeholder="Ex : Company Name , City" required [(ngModel)]="workplace" #wp="ngModel"/>
+                        <div style="color:red;font-family:'Montserrat';font-size:12px;" *ngIf="wp.invalid && (wp.dirty || wp.touched)">
+                                <div *ngIf="wp.errors.required">
+                                            Enter Your Workplace   
+                                </div>
+                            </div>
+                    </div>
+                    <div class='form-row'>
+                        <div class="form-group">
+                            <label for="workas">Work as :</label>
+                            <div class="form-select">
+                                <select name="workas" id="workas" required [(ngModel)]="workas" #wa="ngModel">
+                                    <option value='' selected>---Choose your Job profile---</option>
+                                    <option value="Businessman">Businessman</option>
+                                    <option value="CEO">CEO</option>
+                                    <option value="Employee">Employee</option>
+                                    <option value="Manager">Manager</option>
+                                </select>
+                                <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                            </div>
+                            <div style="color:red;font-family:'Montserrat';font-size:12px;" *ngIf="(wa.dirty || wa.touched)">
+                                <div *ngIf="wa.errors">
+                                    Please Select Job profile	
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="income">Income per Month :</label>
+                            <div class="form-select">
+                                <select name="income" id="income" required [(ngModel)]="income" #incm="ngModel">
+                                    <option value='' selected>--Choose your Income range--</option>
+                                    <option value="more than 1 Lakh INR">more than 1 Lakh INR</option>
+                                    <option value="90,000 INR to 1 Lakh INR">90,000 INR to 1 Lakh INR</option>
+                                    <option value="80,000 INR to 90,000 INR">80,000 INR to 90,000 INR</option>
+                                    <option value="70,000 INR to 80,000 INR">70,000 INR to 80,000 INR</option>
+                                    <option value="60,000 INR to 70,000 INR">60,000 INR to 70,000 INR</option>
+                                    <option value="50,000 INR to 60,000 INR">50,000 INR to 60,000 INR</option>
+                                    <option value="40,000 INR to 50,000 INR">40,000 INR to 50,000 INR</option>
+                                    <option value="30,000 INR to 40,000 INR">30,000 INR to 40,000 INR</option>
+                                    <option value="20,000 INR to 30,000 INR">20,000 INR to 30,000 INR</option>
+                                    <option value="10,000 INR to 20,000 INR">10,000 INR to 20,000 INR</option>
+                                    <option value="less than 10,000 INR">less than 10,000 INR</option>
+                                </select>
+                                <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                            </div>
+                            <div style="color:red;font-family:'Montserrat';font-size:12px;" *ngIf="(incm.dirty || incm.touched)">
+                                <div *ngIf="incm.errors">
+                                    Please Select Income per month	
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="hobbies">Hobbies :</label>
+                        <input type="text" name="hobbies" id="hobbies" required [(ngModel)]="hobbies" #hobby="ngModel"/>
+                        <div style="color:red;font-family:'Montserrat';font-size:12px;" *ngIf="hobby.invalid && (hobby.dirty || hobby.touched)">
+                                <div *ngIf="hobby.errors.required">
+                                            Enter Your Hobbies   
+                                </div>
+                            </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="future">Future Goals :</label>
+                        <input type="text" name="future" id="future" required [(ngModel)]="future" #fgoals="ngModel"/>
+                        <div style="color:red;font-family:'Montserrat';font-size:12px;" *ngIf="fgoals.invalid && (fgoals.dirty || fgoals.touched)">
+                                <div *ngIf="fgoals.errors.required">
+                                            Enter Your Future Goals   
+                                </div>
+                            </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="bio">About yourself :</label>
+                        <input type="text" name="bio" id="bio" required [(ngModel)]="bio" #about="ngModel"/>
+                        <div style="color:red;font-family:'Montserrat';font-size:12px;" *ngIf="about.invalid && (about.dirty || about.touched)">
+                                <div *ngIf="about.errors.required">
+                                            Enter something about yourself   
+                                </div>
+                            </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exp">Expectations from partner :</label>
+                        <input type="text" name="exp" id="exp" required [(ngModel)]="exp" #expr="ngModel"/>
+                        <div style="color:red;font-family:'Montserrat';font-size:12px;" *ngIf="expr.invalid && (expr.dirty || expr.touched)">
+                                <div *ngIf="expr.errors.required">
+                                            Enter Your Expectations from partner   
+                                </div>
+                        </div>
+                    </div>
+                    <div class="form-submit">
+                        <input type="submit" value="Next Step" class="submit" name="submit" id="submit" [disabled]="!Data.form.valid"/>
+                    </div>
+                </form>
+            </div>
+            <div class="signup-img">
+                <img src="../../assets/images/signup-img1.jpg" alt="">
+            </div>
+            </div>
+        </div>
+    </div>

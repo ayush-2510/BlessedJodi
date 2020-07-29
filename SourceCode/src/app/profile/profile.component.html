@@ -1,0 +1,227 @@
+<div class="mynav" id="mymynav">
+    <a routerLink="">Home</a>
+    <a routerLink="/search">Search</a>
+    <a routerLink="/profile">My Profile</a>
+    <div class="mydropdown">
+    <button class="dropbtn1">Inbox [3] 
+    <i class="zmdi zmdi-user"></i>
+    </button>
+    <div class="contentdrop">
+  <a href="#">Seema is interested in you !</a>
+  <a href="#">Reema is interested in you !</a>
+  <a href="#">Heema is interested in you !</a>
+</div>
+</div> 
+    <a href="/logout">Logout</a>
+    <a href="javascript:void(0);" class="icon" onclick="(function(){
+    var x = document.getElementById('mymynav');if (x.className === 'mynav'){x.className += ' responsive';}else{x.className = 'mynav';}})();">
+    <i class="zmdi zmdi-menu"></i>
+    </a>
+</div>
+<div class="container">
+        <div class="profile-img" id='pi'>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                </ol>
+                
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="../../assets/images/test1.jpg" alt="IMAGE 1" style="width:100%;">
+                    </div>
+                    <div class="item">
+                        <img src="../../assets/images/test2.jpg" alt="IMAGE 2" style="width:100%;">
+                    </div>
+                    <div class="item">
+                        <img src="../../assets/images/test3.jpg" alt="IMAGE 3" style="width:100%;">
+                    </div>
+                    <div class="item">
+                        <img src="../../assets/images/test4.jpg" alt="IMAGE 4" style="width:100%;">
+                    </div>
+                </div>
+                
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev" style='background-image:none;'>
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next" style='background-image:none;' >
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="profile-detail">
+            <div class='details'>
+                <h2>{{fullname}}</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name :</label>
+                    </div>
+                    <div class="form-data">
+                        {{fullname}}
+                    </div>                            
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Father's Name :</label>
+                    </div>
+                    <div class="form-data">
+                    {{father_name}}
+                    </div>                            
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Religion :</label>
+                    </div>
+                    <div class="form-data">
+                    {{religion}}
+                    </div>                            
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Mother tongue :</label>
+                    </div>
+                    <div class="form-data">
+                        {{language}}
+                    </div>                            
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Height : </label>
+                    </div>
+                    <div class='form-data'>{{height}}</div>
+                </div>
+                <div class='form-row'>					
+                    <div class="form-group">
+                        <label for="name">Weight :</label>
+                    </div>
+                    <div class='form-data'>
+                    {{weight}}
+                    </div>                            
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Birthdate :</label>
+                    </div>
+                    <div class="form-data">
+                        {{birthdate}}
+                    </div>                            
+                </div>
+                <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Age :</label>
+                        </div>
+                        <div class="form-data">
+                            {{age}} years old
+                        </div>                            
+                    </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Place of Birth :</label>
+                    </div>
+                    <div class="form-data">
+                        {{place}}
+                    </div>                            
+                </div>
+                <div class='form-row'>
+                    <div class="form-group">
+                        <label for="name">Maritial Status :</label>
+                    </div>
+                    <div class="form-data">
+                        {{status}}
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">City :</label>
+                    </div>
+                    <div class="form-data">
+                    {{city}}
+                    </div>                            
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">State :</label>
+                    </div>
+                    <div class="form-data">
+                    {{state}}
+                    </div>                            
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Contact No :</label>
+                    </div>
+                    <div class="form-data">
+                    +919876543210
+                    </div>                            
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Education :</label>
+                    </div>
+                    <div class="form-data">
+                    {{education}} in {{field}}
+                    </div>                            
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Work at :</label>
+                    </div>
+                    <div class="form-data">
+                                {{workplace}}
+                    </div>                            
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Work as :</label>
+                    </div>
+                    <div class="form-data">
+                    {{workas}}
+                    </div>                            
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Income :</label>
+                    </div>
+                    <div class="form-data">
+                        {{income}}
+                    </div>                            
+                </div>
+                <div class="form-row">
+                    <div class="form-area">
+                        <label for="name">Address :</label>
+                        {{address}}
+                    </div>                            
+                </div>
+                <div class="form-row">
+                    <div class="form-area">
+                        <label for="name">About himself :</label>
+                        {{bio}}
+                    </div>                            
+                </div>
+                <div class="form-row">
+                    <div class="form-area">
+                        <label for="name">Hobbies :</label>
+                    {{hobbies}}
+                    </div>                            
+                </div>
+                <div class="form-row">
+                    <div class="form-area">
+                        <label for="name">Future Goals :</label>
+                    {{future}} 
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-area">
+                        <label for="name">Expectations from partner :</label>
+                        {{exp}}
+                    </div>                            
+                </div>
+                <div class='btn-div'><button type='submit' class='butt' routerLink='/update'>Update Profile</button></div>		
+            </div>
+        </div>
+</div>

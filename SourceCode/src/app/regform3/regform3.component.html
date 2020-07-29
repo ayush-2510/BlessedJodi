@@ -1,0 +1,83 @@
+<div class="main">
+    <a class='custom-link' routerLink=''>Home</a>
+    <div class="cust-con">
+        <div class="signup-content">
+            <div class="signupform">
+                <form class="registerform" id="registerform" #Data="ngForm" (ngSubmit)="Registercomplete()">
+                    <h2>Step 3 : Upload your photos</h2>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <div class="wrapper">
+                                <div class="box">
+                                    <div class="js--image-preview"></div>
+                                    <div class="upload-options">
+                                        <label>
+                                            <input type="file" class="image-upload" accept="image/*" name="file1" required [(ngModel)]="file" #f1="ngModel"/>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="wrapper">
+                                <div class="box">
+                                    <div class="js--image-preview"></div>
+                                    <div class="upload-options">
+                                        <label>
+                                            <input type="file" class="image-upload" accept="image/*" required name="file1" required [(ngModel)]="file" #f1="ngModel"/>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <div class="wrapper">
+                                <div class="box">
+                                    <div class="js--image-preview"></div>
+                                    <div class="upload-options">
+                                        <label>
+                                            <input type="file" class="image-upload" accept="image/*" required name="file1" required [(ngModel)]="file" #f1="ngModel"/>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="wrapper">
+                                <div class="box">
+                                    <div class="js--image-preview"></div>
+                                    <div class="upload-options">
+                                        <label>
+                                            <input type="file" class="image-upload" accept="image/*" required name="file1" required [(ngModel)]="file" #f1="ngModel"/>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                    <p style='font-size:15px;'> * photos should be in jpg or jpeg format</p>
+                    </div>
+                    <div class="form-row">
+                    <p style='font-size:15px;'> * photos should be of your current age</p>
+                    </div>
+                    <div style="color:red;font-family:'Montserrat';font-size:15px;" *ngIf="f1.invalid && (f1.dirty || f1.touched)">
+                            <div *ngIf="f1.errors.required">
+                                        Please Select All Photos 
+                            </div>
+                    </div>
+                    <div class="form-submit">
+                        <input type="submit" value="Done" class="submit" name="submit" id="submit" /> <!-- [disabled]="!Data.form.valid" -->
+                    </div>
+                </form>
+            </div>
+            <div class="signup-img">
+                <img src="../../assets/images/signup-img1.jpg" alt="">
+            </div>
+            
+        </div>
+    </div>
+</div>
