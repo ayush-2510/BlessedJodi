@@ -1,1 +1,1 @@
-# BlessedJodi
+# BlessedJodi : v1.0
